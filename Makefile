@@ -7,7 +7,7 @@ OBJS   = lecture_mol2.o chargeur_covalence.o mol2_amarrage.o
 all: $(EXEC)
 
 run: $(EXEC)
-	-@./$(EXEC) CoV_radii 1QSN_NO_BOND.mol2 1QSN_SOLVED.mol2
+	-@./$(EXEC) CoV_radii ligand.mol2 site.mol2
 
 $(EXEC): $(OBJS)
 	-@echo ""

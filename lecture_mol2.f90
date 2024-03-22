@@ -115,7 +115,7 @@ contains
 
             atoms(j) = atom_xyz
 
-            if (end/=0) then
+            if (end /= 0) then
                 print '(a, a)', "Invalid mol2 format of ", filename
                 stop 1
             end if
