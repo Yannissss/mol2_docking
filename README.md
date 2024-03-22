@@ -6,12 +6,12 @@ Le code présent en l'état est incomplet. Vous trouverez ci-dessous dans les co
 
 Hafsa
 - Function `sample`
-- Function 'eval_solution'
-- Function 'check_hydrogen_bound'
+- Function `eval_solution`
+- Function `check_hydrogen_bound`
 
 Yannis
-- Function 'generate_atom'
-- Function 'compute_angle'
+- Function `generate_atom`
+- Function `compute_angle`
 
 ## Commentaires
 
