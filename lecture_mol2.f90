@@ -124,7 +124,8 @@ contains
             atoms(j) = atom_xyz
 
             if (end /= 0) then
-                print ('(a, a, a, i4)'), "[lecture_mol2] Error reading ", filename, " at atom ", j
+                print ('(a, a, a, i4)'), "[lecture_mol2] Error reading ", filename, &
+                    " at atom ", j
                 !print '(a, a)', "[lecture_mol2] Invalid mol2 format of ", filename
                 stop 1
             end if
