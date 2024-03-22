@@ -2,7 +2,7 @@ CC      = ifx
 CFLAGS  = -O3 -march=native -ffast-math -fopenmp 
 
 EXEC   = mol2_amarrage
-OBJS   = lecture_mol2.o chargeur_covalence.o mol2_amarrage.o
+OBJS   = lecture_mol2.o chargeur_covalence.o affiche_topologie.o mol2_amarrage.o
 
 all: $(EXEC)
 

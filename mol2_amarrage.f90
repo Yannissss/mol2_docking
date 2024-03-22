@@ -1,6 +1,7 @@
 program mol2_amarrage
     use chargeur_covalence
     use lecture_mol2
+    use affiche_topologie
 
     implicit none
 
@@ -71,8 +72,10 @@ program mol2_amarrage
     ! Genetic algorithm
 
     ! Arg summary
-    print '(a, a, a, i4, a)', "[mol2_amarrage] Ligand molecule : ", ligand%mol_name, " / ", ligand%num_atoms, " atoms"
-    print '(a, a, a, i4, a)', "[mol2_amarrage] Site molecule : ", site%mol_name, " / ", site%num_atoms, " atoms"
+    print '(a, a, a, i4, a)', "[mol2_amarrage] Ligand molecule : ", &
+        trim(ligand%mol_name), " (", ligand%num_atoms, " atoms)"
+    print '(a, a, a, i4, a)', "[mol2_amarrage] Site molecule   : ", &
+        trim(site%mol_name), " (", site%num_atoms, " atoms)"
     print '(a, i4)', "[mol2_amarrage] population  = ", population
     print '(a, f3.2)', "[mol2_amarrage] merge_rate  = ", merge_rate
     print '(a, f3.2)', "[mol2_amarrage] mutate_rate = ", mutate_rate

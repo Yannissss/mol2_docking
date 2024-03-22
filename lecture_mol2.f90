@@ -68,7 +68,15 @@ contains
                     ! Get molecule name
                     read (fd, '(a)', iostat = end), mol_name
                     ! Get atoms numbers
-                    read (fd, '(i5)', iostat = end), num_atoms
+
+                    ! Small fix to adapt to small numbers
+                    read (fd, '(a)', iostat = end), line
+                    i = index(line, ' ')
+                    if ( i > 0 ) then
+                        line = line(:i)
+                    end if
+                    read(line, *, iostat = end), num_atoms
+
                     ! Exit to section 2
                     exit
                 end if
@@ -116,7 +124,8 @@ contains
             atoms(j) = atom_xyz
 
             if (end /= 0) then
-                print '(a, a)', "Invalid mol2 format of ", filename
+                print ('(a, a, a, i4)'), "[lecture_mol2] Error reading ", filename, " at atom ", j
+                !print '(a, a)', "[lecture_mol2] Invalid mol2 format of ", filename
                 stop 1
             end if
         end do
